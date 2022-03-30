@@ -1,3 +1,11 @@
 body {
-    background-color: deepskyblue;
+  background-color: deepskyblue;
+}
+p {
+  font-size: 1.3rem;
+}
+
+abbr {
+  font-style: italic;
+  font-weight: 100;
 }
