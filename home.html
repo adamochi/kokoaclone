@@ -90,14 +90,17 @@ Google takes the title and meta tag and displays it on google-->
     'html tags mdn' -->
 
 <form action="">
-    <label for="profile">Profile Photo</label>
-    <input id="profile" type="file" accept="image/*">
-
-    <label for="website">Website</label>
-    <input id="website" required placeholder="address" type="url">
+    <div>
+        <label for="profile">Profile Photo</label>
+        <input id="profile" type="file" accept="image/*">
+    </div>
+    <nav>
+        <label for="website">Website</label>
+        <input id="website" required placeholder="address" type="url">
+    </nav>
+    
     <label for="dob">Date of Birth</label>
     <input type="date" name="Date of Birth" id="dob">
-
     <label for="first name">First name</label>
     <input id="first name" required placeholder="first name" type="text">
 
@@ -106,6 +109,15 @@ Google takes the title and meta tag and displays it on google-->
     <input required placeholder="password" minlength="6" type="password">
     <input type="submit" value="create account">
 </form>
-<!-- id is an attribute that you can add to anything inside the body. because it is a unique identifier. You can only have one per tag, and NEEDS TO BE UNIQUE. -->
+<!-- id is an attribute that you can add to anything inside the body. because it is a unique identifier. You can only have one per tag/element, and NEEDS TO BE UNIQUE. -->
     </body> 
 </html>
+<!-- some tags don't really mean anything,
+    one is called div,. it is division,
+  GO TO Content Sectioning
+  Could... make a div and give it an id !~OR~! use more understandable dividers(content sectioning) header,footer,main. Also symantic tags - Inline text semantics.
+Span is for short text, doesn't mean anything on it's own.
+EXPLAIN YOUR CODE TO THE WEBSITE AND YOUR EYES AND YOUR TEAM MATES  
+Thankfully these things exist nowadays instead of div div div div div div div -->
+
+<!-- 3.0 -->
