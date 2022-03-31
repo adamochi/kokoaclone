@@ -41,8 +41,8 @@
         </h1>
         <a href="https://google.com">Go to google!</a>
         <img src="img/billlie.jfif" alt="">
-    </body>
-</html>
+
+
 <!-- everything you put on the head is invisible, everything visible should be on the body -->
 <food>kimchi</food>
 <h1>hello this is my website!</h1>
@@ -90,7 +90,22 @@ Google takes the title and meta tag and displays it on google-->
     'html tags mdn' -->
 
 <form action="">
-    <input placeholder="username" type="text">
-    <input placeholder="password" type="password">
-    <input type="button" value="Submit">
+    <label for="profile">Profile Photo</label>
+    <input id="profile" type="file" accept="image/*">
+
+    <label for="website">Website</label>
+    <input id="website" required placeholder="address" type="url">
+    <label for="dob">Date of Birth</label>
+    <input type="date" name="Date of Birth" id="dob">
+
+    <label for="first name">First name</label>
+    <input id="first name" required placeholder="first name" type="text">
+
+    <input required placeholder="username" type="text">
+    <input required placeholder="last name" disabled type="text">
+    <input required placeholder="password" minlength="6" type="password">
+    <input type="submit" value="create account">
 </form>
+<!-- id is an attribute that you can add to anything inside the body. because it is a unique identifier. You can only have one per tag, and NEEDS TO BE UNIQUE. -->
+    </body> 
+</html>
