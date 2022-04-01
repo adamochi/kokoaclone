@@ -2,6 +2,50 @@
 <html lang="en">
     <!-- language here^^ -->
     <head>
+        <title>Home of my not first website</title>
+        <!-- grab the h1 -->
+        <style>
+            html {
+                background-color: rgb(61, 32, 226);
+            }
+                body {
+                    margin: 50px;
+                    padding: 50px;
+                    background-color: aqu;
+                    /* top right bottom left, clockwise
+                    it's a shortcut: margin: 40px 4px 10px 4px */
+                }
+                div  {
+                    height: 100px;
+                    width: 100px;
+                    padding: 20px;
+                    background-color: tomato;
+                }
+            #a {
+                background-color: chartreuse;
+            }
+            #b {
+                background-color: antiquewhite;
+            }
+            #c {
+                background-color: blanchedalmond;
+            }
+            
+                /* even though i didn'e put a space around border, there is user agent style sheet, that means styles that the browser gave you. margin is 8px
+                MARGIN is space from the border of the box outwards!
+                
+                There is something called collapsing margins. if the border of box is same as other vertically, they collapse. so use padding
+                 */
+            }
+            h1 {
+                font-size: 100px;
+                color: springgreen;
+                text-align: center;
+            }
+            span {
+                display: block;
+            }
+        </style>
         <link
             rel="shorcut icon"
             sizes="16x16 32x32 64x64"
@@ -11,7 +55,6 @@
         <!-- og:image etccc
                 This image and this tag is the image you see when i share the link
                 google will look at og stuff -->
-        <title>Home of my not first website</title>
         <meta name="description" content="This is my website"/>
         <!-- the meta tag give extra content - the one google looks at! -->
         <meta charset="utf-8"/>
@@ -20,7 +63,29 @@
     </head>
     <!-- 2 parts - the head and the body -->
     <body>
+        <div id="a">
+            <div id="b">
+                <div id="c"></div>
+            </div>
+        </div>
+        <!-- these are two kinds of behaviours. blocks(nothing coming next to me) and inlines(in the same line)
+        very few things are inline. address is not,
+        spans links and images are the only things inline. easier to remember what is not a block!
+        There is something block cant do that span can
+    inlines do not have height and width so if you style block as inline, it disappears. the div disappears.  
+there are more things that make these things different. boxes have 3 cool features
+padding, margins, and border-->
+        <div>
+            <span>hello</span>
+        </div>
+        <div></div>
+        <div></div>
+        
+        <span>hello</span>
+        <a href="">link</a>
+        <span>hello</span>
         <pre>lalalalalalalalalal</pre>
+
         <p>lalalalalalalalalal</p>
        
         <p>My name is <abbr title="Adam Joey Sullivan">AJS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
@@ -122,5 +187,9 @@ Thankfully these things exist nowadays instead of div div div div div div div --
 <!-- div is the most generic container. We want to have meaning when we write the code and we want to understand  what we are looking at when we read the code -->
 <!-- don't worry about remebering all the tags. just need to understand and can google everything, you will remember all of the things you use the most. -->
 
-<!-- 3.0 -->
+<!-- 3.0 - Time to learn about the styling. -->
 
+<!-- <style> should be on the head, not header -->
+
+<!-- a div, boxes do not allow things next to them.
+A Span allows in a row -->

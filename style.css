@@ -1,6 +1,9 @@
-body {
+/* called Cascading because it is read from top to bottom
+inline css is written on html and external css is here */
+
+/* body {
   background-color: deepskyblue;
-}
+} */
 p {
   font-size: 1.3rem;
 }
@@ -12,3 +15,5 @@ abbr {
 figure {
   margin: 75px;
 }
+/* css name will point to a html tag and is called a selector. example:
+selector {} */
