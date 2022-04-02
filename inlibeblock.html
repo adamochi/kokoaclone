@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Mochi Times</title>
+    <style>
+      body {
+        height: 100vh; /* vertical height is 100 percent */
+        margin: 0px;
+        display: flex;
+        justify-content: space-evenly; /* <<this<< by default horizontal (maina axis)*/
+        align-items: center; /* cross axis is vertical */
+      }
+      /* if body does not have a height - align-items centre won't work because they are already touching the ceiling and floor. So what you wanna do is add a height to the container or body in this case. could have done 1000px but we used VH because different screens have different heights eg. iphone vs 1080p display */
+      div {
+        /*  display: inline-block; */
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+      .pop {
+        background-color: blueviolet;
+      }
+      /* "inline-block" is old and it SUCKS. There is a space between and we didn't create space. Was not created to support different display resolutions, this should be on one single line but narrow browser window makes them go to the next line 
+      
+      Don't talk to the div, talk to the father BODY not the children
+      Make the father of div a flex
+      */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div class="pop"></div>
+    <div></div>
+    <div class="pop"></div>
+    <div></div>
+    <div class="pop"></div>
+  </body>
+</html>
