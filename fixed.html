@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fixed party</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 20px;
+      }
+      div {
+        /* position: fixed; */
+        width: 300px;
+        height: 300px;
+        color: aliceblue;
+        background-color: aquamarine;
+        position: relative;
+      }
+      #mlem {
+        top: 50%;
+        left: 50px;
+        position: fixed;
+        background-color: deeppink;
+        width: 400px;
+        opacity: 50%;
+      }
+      #plem {
+        position: relative;
+        opacity: 50%;
+      }
+      .flem {
+        background-color: firebrick;
+        height: 100px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100px;
+        /* from where it starts -10 Very important to remember relative like this. from where the element starts
+        Position absolute will align itself according to the relative father. (flem is div of plem) Just make the father of flem relative. NEEDS A RELATIVE FATHER!!!!!!! to use absolute. */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="plem">
+      <div class="flem"></div>
+    </div>
+    <div id="mlem"></div>
+  </body>
+</html>
