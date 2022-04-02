@@ -11,13 +11,20 @@
         margin: 0px;
         display: flex;
         justify-content: space-evenly; /* <<this<< by default horizontal (maina axis)*/
+        /* flex-direction: column-reverse; this will flip your axis! */
         align-items: center; /* cross axis is vertical */
+        /* flex-wrap: wrap-reverse; */
       }
       /* if body does not have a height - align-items centre won't work because they are already touching the ceiling and floor. So what you wanna do is add a height to the container or body in this case. could have done 1000px but we used VH because different screens have different heights eg. iphone vs 1080p display */
       div {
         /*  display: inline-block; */
-        width: 100px;
-        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        font-size: xx-large;
+        color: fuchsia;
         background-color: aquamarine;
       }
       .pop {
@@ -31,11 +38,11 @@
     </style>
   </head>
   <body>
-    <div></div>
-    <div class="pop"></div>
-    <div></div>
-    <div class="pop"></div>
-    <div></div>
-    <div class="pop"></div>
+    <div>1</div>
+    <div class="pop">2</div>
+    <div>3</div>
+    <div class="pop">4</div>
+    <div>5</div>
+    <div class="pop">6</div>
   </body>
 </html>
