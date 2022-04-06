@@ -37,15 +37,45 @@
         top: 0px;
         right: 0px;
         width: 100px;
-        /* from where it starts -10 Very important to remember relative like this. from where the element starts
+        /* from where it starts -10px Very important to remember relative like this. from where the element starts
         Position absolute will align itself according to the relative father. (flem is div of plem) Just make the father of flem relative. NEEDS A RELATIVE FATHER!!!!!!! to use absolute. */
       }
+      div:last-child {
+        background-color: chocolate;
+      }
+      /* id has a # and class has a .
+      #plem and .flem */
+      span {
+        background-color: hotpink;
+      }
+      span:nth-child(odd) {
+        background-color: crimson;
+      }
+    /* 2n will be every second one, 3n + 1 */
+    p span {}
     </style>
   </head>
   <body>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    
     <div id="plem">
       <div class="flem"></div>
     </div>
     <div id="mlem"></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </body>
 </html>
+
+<!-- pseudo seloctors
+maybe i wanns select the class that is next to the span or the class that is the last one
+ -->
