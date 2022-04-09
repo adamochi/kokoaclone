@@ -67,11 +67,77 @@
       color: plum;
     }
     /* the '>' means direct child. so div > span will underline Hello
-    the + will be ??? the brother of , so in this case the span next to the paragraph and not inside */
+    the + will be ??? the brother of (direct sibling), so in this case the span next to the paragraph and not inside */
 
+    p ~ span {
+      color: blue;
+    }
+    input[placeholder~="Name"] {
+      border: 2px solid skyblue;
+      background-color: pink;
+    
+    }
+    input:required {
+      border: 2px solid pink;
+      background-color: palevioletred;
+    }
+    /* will probably use input:required a lot */
+
+    /* states
+force element state
+:active     :hover
+:focus      :visited
+:focus-within
+ */
+button {
+  background-color: aliceblue;
+
+  border-radius: 5px;
+}
+ button:hover{
+   background-color: pink;
+  }
+  button:active{
+    background-color: deepskyblue;
+  }
+  a:visited {
+    color: palevioletred;
+  }
+  form + form {
+    border: 2px solid salmon;
+    display: flex;
+    flex-direction: column;
+  }
+  form:focus-within {
+    border-color: slateblue;
+  }
+  form:hover input:focus{
+    background-color: skyblue;
+  }
+  input::placeholder {
+    color: lightseagreen;
+  }
+  /* can combine multiple element states like this^^ */
     </style>
   </head>
   <body>
+    <button>I'm a button</button>
+    <a href="https://apple.com">apple dogs</a>
+    <div>
+      <form>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        
+        
+
+        <input type="text" required placeholder="password">
+      </form>
+      <form>
+        <input type="text" placeholder="focus within">
+        <input type="text" placeholder="focus within">
+
+      </form>
+    </div>
     <span>hello</span>
     <span>hello</span>
     <span>hello</span>
@@ -87,6 +153,8 @@
         I like m19upefwfsaijweojfoasfjvo!
         <Span>inside</Span>
       </p>
+      <address>What if i put an address next to the paragraph?</address>
+      <!-- because now the span is not next to the paragraph anymore.  what you can do is ~ tilde. So, if you have a brother that is not 'immediately' there you can use tilde -->
       <span>Yo i'm a span nek to a paragraph</span>
     </div>
     <!-- can put as many parents as you like
@@ -104,3 +172,6 @@
 <!-- pseudo seloctors
 maybe i wanna select the class that is next to the span or the class that is the last one
  -->
+
+ <!-- Three pseudo elements 
+one is styling the placeholder - input::placeholder -->
