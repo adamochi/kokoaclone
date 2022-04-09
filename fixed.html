@@ -55,16 +55,20 @@
       }
     /* 2n will be every second one, 3n + 1 every 3rd starting at 1st */
 
-    p span {
+    /* p span {
       color: aqua;
-    }
+    } */
+
     div > span {
       text-decoration: underline;
     }
+
     p + span {
-      text-decoration: underline; 
+      color: plum;
     }
-    /* the '>' means direct child. so div > span will underline Hello */
+    /* the '>' means direct child. so div > span will underline Hello
+    the + will be ??? the brother of , so in this case the span next to the paragraph and not inside */
+
     </style>
   </head>
   <body>
@@ -83,6 +87,7 @@
         I like m19upefwfsaijweojfoasfjvo!
         <Span>inside</Span>
       </p>
+      <span>Yo i'm a span nek to a paragraph</span>
     </div>
     <!-- can put as many parents as you like
     problem is i want both span to have color background, padding, border-radius but only underline the first span -->
@@ -97,5 +102,5 @@
 </html>
 
 <!-- pseudo seloctors
-maybe i wanns select the class that is next to the span or the class that is the last one
+maybe i wanna select the class that is next to the span or the class that is the last one
  -->
