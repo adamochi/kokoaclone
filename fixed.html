@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fixed party</title>
     <style>
+      :root {
+        --main-color: yellowgreen
+      }
       body {
         height: 1000vh;
         margin: 20px;
@@ -117,7 +120,32 @@ button {
   input::placeholder {
     color: lightseagreen;
   }
+div p {
+  color: var(--main-color);
+}
   /* can combine multiple element states like this^^ */
+    
+a {
+  color: rgb(6, 107, 107);
+  background-color: rgb(128, 80, 21);
+  text-decoration: line-through;
+  padding: 3px 5px;
+  border-radius: 8px;
+}
+a:hover {
+  color: rgb(128, 80, 21);
+  background-color: rgb(6, 107, 107);
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </style>
   </head>
   <body>
@@ -165,16 +193,16 @@ button {
     <div id="mlem"></div>
     <div></div>
     <div></div>
-    <div></div>
-  </body>
-</html>
+    <div>
+      <p>sdfsdfsdfsdfsdfsdf</p>
+    </div>
+    
+    <!-- pseudo seloctors
+      maybe i wanna select the class that is next to the span or the class that is the last one
+    -->
 
-<!-- pseudo seloctors
-maybe i wanna select the class that is next to the span or the class that is the last one
- -->
-
- <!-- Three pseudo elements !!!!!!!!!!!!!!!!
-one is styling the placeholder - input::placeholder 
+    <!-- Three pseudo elements !!!!!!!!!!!!!!!!
+      one is styling the placeholder - input::placeholder 
 ^^This can style the placeholder
 p::selection{
   background-color: yellowgreen;
@@ -185,12 +213,41 @@ input[type="password"] {
   color: white;
   font-size: 50px;
   background-color: yellowgreen
-
+  
   can use ~= for...? $= for ending and ^= for beginning
 }-->
 <!-- Colours and Variables #3.19
 
-Three colour codes are used by css
-#fcce00 is one colour code
-sometimes you want the rgb(253, 206, 0)
-there is also rgba(253, 206, 0, 0.5)  <<This case will have 50% opacity.   -->
+  Three colour codes are used by css
+#fcce00 is one colour code                  hexadecimal
+sometimes you want the rgb(253, 206, 0)     rgb
+there is also rgba(253, 206, 0, 0.5)  <<This case will have 50% opacity. the a is alpha -->
+
+
+  <!-- :root
+    
+    Can make css look like a programming language
+    What this does is allow me to set a main color and use that for all the things i want to set the same color
+    
+  -->
+  <!--      #4.0 Transitions
+    a transition is a way we can animate a change from one state to another
+
+
+
+
+   -->
+  
+<a href="#">Go Home</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </body>
+  </html>
