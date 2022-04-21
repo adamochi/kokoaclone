@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fixed party</title>
     <style>
+      :root {
+        --main-color: yellowgreen
+      }
       body {
         height: 1000vh;
         margin: 20px;
@@ -37,15 +40,214 @@
         top: 0px;
         right: 0px;
         width: 100px;
-        /* from where it starts -10 Very important to remember relative like this. from where the element starts
+        /* from where it starts -10px Very important to remember relative like this. from where the element starts
         Position absolute will align itself according to the relative father. (flem is div of plem) Just make the father of flem relative. NEEDS A RELATIVE FATHER!!!!!!! to use absolute. */
       }
+      div:last-child {
+        background-color: chocolate;
+      }
+      /* id has a # and class has a .
+      #plem and .flem */
+      span {
+        background-color: hotpink;
+        padding: 9px;
+        border-radius: 10px;
+      }
+      span:nth-child(odd) {
+        background-color: crimson;
+      }
+    /* 2n will be every second one, 3n + 1 every 3rd starting at 1st */
+
+    /* p span {
+      color: aqua;
+    } */
+
+    div > span {
+      text-decoration: underline;
+    }
+
+    p + span {
+      color: plum;
+    }
+    /* the '>' means direct child. so div > span will underline Hello
+    the + will be the brother of (direct sibling), so in this case the span next to the paragraph and not inside */
+
+    p ~ span {
+      color: blue;
+    }
+    input[placeholder~="Name"] {
+      border: 2px solid skyblue;
+      background-color: pink;
+    
+    }
+    input:required {
+      border: 2px solid pink;
+      background-color: palevioletred;
+    }
+    /* will probably use input:required a lot */
+
+    /* states
+force element state
+:active     :hover
+:focus      :visited
+:focus-within
+ */
+button {
+  background-color: aliceblue;
+
+  border-radius: 5px;
+}
+ button:hover{
+   background-color: pink;
+  }
+  button:active{
+    background-color: deepskyblue;
+  }
+  a:visited {
+    color: palevioletred;
+  }
+  form + form {
+    border: 2px solid salmon;
+    display: flex;
+    flex-direction: column;
+  }
+  form:focus-within {
+    border-color: slateblue;
+  }
+  form:hover input:focus{
+    background-color: skyblue;
+  }
+  input::placeholder {
+    color: lightseagreen;
+  }
+div p {
+  color: var(--main-color);
+}
+  /* can combine multiple element states like this^^ */
+    
+a {
+  color: rgb(6, 107, 107);
+  background-color: rgb(128, 80, 21);
+  text-decoration: line-through;
+  padding: 3px 5px;
+  border-radius: 8px;
+}
+a:hover {
+  color: rgb(128, 80, 21);
+  background-color: rgb(6, 107, 107);
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </style>
   </head>
   <body>
+    <button>I'm a button</button>
+    <a href="https://apple.com">apple dogs</a>
+    <div>
+      <form>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        
+        
+
+        <input type="text" required placeholder="password">
+      </form>
+      <form>
+        <input type="text" placeholder="focus within">
+        <input type="text" placeholder="focus within">
+
+      </form>
+    </div>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <div>
+      <span>Hello</span>
+      <p>
+        I like m19upefwfsaijweojfoasfjvo!
+        <Span>inside</Span>
+      </p>
+      <address>What if i put an address next to the paragraph?</address>
+      <!-- because now the span is not next to the paragraph anymore.  what you can do is ~ tilde. So, if you have a brother that is not 'immediately' there you can use tilde -->
+      <span>Yo i'm a span nek to a paragraph</span>
+    </div>
+    <!-- can put as many parents as you like
+    problem is i want both span to have color background, padding, border-radius but only underline the first span -->
     <div id="plem">
       <div class="flem"></div>
     </div>
     <div id="mlem"></div>
+    <div></div>
+    <div></div>
+    <div>
+      <p>sdfsdfsdfsdfsdfsdf</p>
+    </div>
+    
+    <!-- pseudo seloctors
+      maybe i wanna select the class that is next to the span or the class that is the last one
+    -->
+
+    <!-- Three pseudo elements !!!!!!!!!!!!!!!!
+      one is styling the placeholder - input::placeholder 
+^^This can style the placeholder
+p::selection{
+  background-color: yellowgreen;
+} ^^When you highlight text 
+
+(style)
+input[type="password"] {
+  color: white;
+  font-size: 50px;
+  background-color: yellowgreen
+  
+  can use ~= for...? $= for ending and ^= for beginning
+}-->
+<!-- Colours and Variables #3.19
+
+  Three colour codes are used by css
+#fcce00 is one colour code                  hexadecimal
+sometimes you want the rgb(253, 206, 0)     rgb
+there is also rgba(253, 206, 0, 0.5)  <<This case will have 50% opacity. the a is alpha -->
+
+
+  <!-- :root
+    
+    Can make css look like a programming language
+    What this does is allow me to set a main color and use that for all the things i want to set the same color
+    
+  -->
+  <!--      #4.0 Transitions
+    a transition is a way we can animate a change from one state to another
+
+
+
+
+   -->
+  
+<a href="#">Go Home</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   </body>
-</html>
+  </html>
